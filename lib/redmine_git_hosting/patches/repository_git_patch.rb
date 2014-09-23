@@ -336,6 +336,11 @@ module RedmineGitHosting
         end
 
 
+        def is_public
+          extra[:public_repo]
+        end
+
+
         private
 
 
