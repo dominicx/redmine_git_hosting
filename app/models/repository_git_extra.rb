@@ -7,7 +7,7 @@ class RepositoryGitExtra < ActiveRecord::Base
   BOTH     = 3
 
   ## Attributes
-  attr_accessible :git_http, :git_daemon, :git_notify, :default_branch, :protected_branch
+  attr_accessible :git_http, :git_daemon, :git_notify, :default_branch, :protected_branch, :public_repo
 
   ## Relations
   belongs_to :repository
@@ -23,6 +23,7 @@ class RepositoryGitExtra < ActiveRecord::Base
   validates :git_notify,       :inclusion => { :in => [true, false] }
   validates :default_branch,   :presence  => true
   validates :protected_branch, :inclusion => { :in => [true, false] }
+  validates :public_repo,      :inclusion => { :in => [true, false] }
   validates :key,              :presence  => true
 
   validates_associated :repository

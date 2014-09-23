@@ -78,7 +78,7 @@ class SmartHttpController < ApplicationController
     end
 
     @project = @repository.project
-    @allow_anonymous_read = @project.is_public
+    @allow_anonymous_read = (@project.is_public || @repository.is_public) ? true : false
 
     logger.info { "project name    : #{@project.identifier}" }
     logger.info { "public project  : #{@allow_anonymous_read}" }

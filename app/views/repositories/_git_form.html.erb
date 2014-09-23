@@ -121,6 +121,14 @@
     <% end %>
 
     <p>
+      <label><%= l(:label_enable_public_repo) %></label>
+      <span class="bootstrap-switch switch-small" data-on="primary" data-off="default" data-on-label="<%= l(:label_yes) %>" data-off-label="<%= l(:label_no) %>">
+        <%= hidden_field_tag "extra[public_repo]", "false" %>
+        <%= check_box_tag "extra[public_repo]", @repository.extra[:public_repo], @repository.extra[:public_repo] %>
+      </span>
+    </p>
+
+    <p>
       <%= label_tag  "extra[git_http]", l(:label_enable_smart_http) %>
       <%= select_tag "extra[git_http]", options_for_select([
                                                               [l(:label_disabled), "0"],

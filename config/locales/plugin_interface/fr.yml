@@ -221,6 +221,7 @@ fr:
   label_enable_git_daemon: Activer le daemon Git
   label_enable_smart_http: Mode Smart HTTP
   label_enable_protected_branches: Activer les branches protégées
+  label_enable_public_repo: Rendre le dépôt public
   label_git_daemon: Daemon Git
   label_smart_http: Smart HTTP
   label_git_notify: Notifications Git
@@ -229,6 +230,7 @@ fr:
   label_init_repo_with_readme: Initialiser le dépôt avec un fichier README
   label_browse_repository: Parcourir les sources
   label_repository_exists_in_gitolite: Le dépôt existe dans Gitolite
+  label_public_repo: Dépôt public
 
   # Repository list view
   label_repository_enabled_capabilities: Fonctionnalité activées du dépôt

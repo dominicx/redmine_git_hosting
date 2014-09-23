@@ -122,6 +122,11 @@ module GitHostingHelper
         css_class << 'icon-git-protected-branch'
         enabled = repository.extra[:protected_branch]
 
+      when :public_repo
+        label = [ l(:label_public_repo) ]
+        css_class << 'icon-git-public-repo'
+        enabled = repository.extra[:public_repo]
+
     end
 
     label << "(#{l(:label_disabled)})" if !enabled
